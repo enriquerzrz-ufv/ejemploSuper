@@ -1,4 +1,4 @@
-package ufv.dis.ejemplo;
+package ufv.dis.ejemplo.front;
 
 import javax.servlet.annotation.WebServlet;
 

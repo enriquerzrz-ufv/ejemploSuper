@@ -1,16 +1,18 @@
 package ufv.dis.ejemplo.back;
 
+import java.util.ArrayList;
+
 public class Equipo {
     private String squadName;
     private String homeTown;
     private int formed;
     private String secretBase;
     private Boolean active;
-    private Miembro[] members;
+    private ArrayList<Miembro> members = new ArrayList<>();
 
     // Constructores
 
-    public Equipo(String squadName, String homeTown, int formed, String secretBase, Boolean active, Miembro[] members) {
+    public Equipo(String squadName, String homeTown, int formed, String secretBase, Boolean active, ArrayList<Miembro> members) {
         this.squadName = squadName;
         this.homeTown = homeTown;
         this.formed = formed;
@@ -19,7 +21,8 @@ public class Equipo {
         this.members = members;
     }
 
-    public Equipo(){}
+    public Equipo() {
+    }
 
     // Getters && Setters
 
@@ -63,15 +66,28 @@ public class Equipo {
         this.active = active;
     }
 
-    public Miembro[] getMembers() {
+    public ArrayList<Miembro> getMembers() {
         return members;
     }
 
-    public void setMembers(Miembro[] members) {
+    public void setMembers(ArrayList<Miembro> members) {
         this.members = members;
     }
 
     // Métodos
+    public void crearMiembro(Equipo equipo, Miembro miembro) {
+        if (miembro == null || miembro.getName().equals("") || miembro.getAge() == 0 || miembro.getSecretIdentity().equals("") || miembro.getPowers().length == 0) {
+            throw new PWException("ERROR");
+        } else {
+            equipo.members.add(members.size(), miembro);
+        }
+    }
 
-
+    public void eliminarMiembro (Equipo equipo, Miembro miembro){
+        if (equipo == null || miembro == null)
+            throw new PWException("ERROR");
+        else{
+            equipo.members.removeIf(m -> m == miembro);
+        }
+    }
 }

@@ -2,15 +2,15 @@ package ufv.dis.ejemplo.back;
 
 public class Miembro {
     private String name;
-    private int edad;
+    private int age;
     private String secretIdentity;
     private String powers[];
 
     // Constructores
 
-    public Miembro(String name, int edad, String secretIdentity, String[] powers) {
+    public Miembro(String name, int age, String secretIdentity, String[] powers) {
         this.name = name;
-        this.edad = edad;
+        this.age = age;
         this.secretIdentity = secretIdentity;
         this.powers = powers;
     }
@@ -27,12 +27,12 @@ public class Miembro {
         this.name = name;
     }
 
-    public int getEdad() {
-        return edad;
+    public int getAge() {
+        return age;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getSecretIdentity() {

@@ -12,11 +12,14 @@ import static org.junit.Assert.assertNotEquals;
 public class FuncionesTest {
     Equipo equipo;
     Miembro miembro;
+    String[] powers;
 
     @After
     public void after(){
         equipo = new Equipo();
         miembro = new Miembro();
+        powers[0] = "kk";
+        powers[1] = "kk";
     }
 
     @Before
@@ -27,4 +30,16 @@ public class FuncionesTest {
         equipo = Funciones.leerJson("super.json");
         assertNotEquals("", equipo.getHomeTown());
     }
+
+    @Test
+    public void añadirMiembro(){
+        @Test
+        public void funciones1(){
+            miembro = new Miembro("kk", 13,"kk", "kk", );
+            localidades.crearLocalidad(localidades, localidad);
+            assertEquals("kk", localidades.lista.get(0).getCapital());
+        }
+    }
+
+
 }

@@ -56,8 +56,13 @@ public class MyUI extends UI {
             else{
                 try {
                     String[] poderes = powers.getValue().split(",");
+                    ArrayList<String> p = new ArrayList<>();
 
-                    miembro = new Miembro(name.getValue(), Integer.parseInt(age.getValue()), secretIdentity.getValue(), poderes);
+                    for(String s: poderes){
+                        p.add(p.size(), s);
+                    }
+
+                    miembro = new Miembro(name.getValue(), Integer.parseInt(age.getValue()), secretIdentity.getValue(), p);
 
                     Notification.show("Localidad añadida correctamente", Notification.Type.TRAY_NOTIFICATION);
                     equipo.crearMiembro(equipo, miembro);
@@ -70,7 +75,7 @@ public class MyUI extends UI {
         });
 
         listaa.setItems(equipo.getMembers());
-        form = new FormLayout(name, age, secretIdentity, powers);
+        form = new FormLayout(name, age, secretIdentity, powers, button);
         crear.addComponents(form, listaa);
         crear.setMargin(true);
 

@@ -1,14 +1,16 @@
 package ufv.dis.ejemplo.back;
 
+import java.util.ArrayList;
+
 public class Miembro {
     private String name;
     private int age;
     private String secretIdentity;
-    private String[] powers;
+    private ArrayList<String> powers;
 
     // Constructores
 
-    public Miembro(String name, int age, String secretIdentity, String[] powers) {
+    public Miembro(String name, int age, String secretIdentity, ArrayList<String>  powers) {
         this.name = name;
         this.age = age;
         this.secretIdentity = secretIdentity;
@@ -43,11 +45,11 @@ public class Miembro {
         this.secretIdentity = secretIdentity;
     }
 
-    public String[] getPowers() {
+    public ArrayList<String> getPowers() {
         return powers;
     }
 
-    public void setPowers(String[] powers) {
+    public void setPowers(ArrayList<String> powers) {
         this.powers = powers;
     }
 

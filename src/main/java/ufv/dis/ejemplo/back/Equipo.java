@@ -76,7 +76,7 @@ public class Equipo {
 
     // Métodos
     public void crearMiembro(Equipo equipo, Miembro miembro) {
-        if (miembro == null || miembro.getName().equals("") || miembro.getAge() == 0 || miembro.getSecretIdentity().equals("") || miembro.getPowers().length == 0) {
+        if (miembro == null || miembro.getName().equals("") || miembro.getAge() == 0 || miembro.getSecretIdentity().equals("")) {
             throw new PWException("ERROR");
         } else {
             equipo.members.add(members.size(), miembro);

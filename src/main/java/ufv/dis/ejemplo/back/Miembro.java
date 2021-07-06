@@ -4,7 +4,7 @@ public class Miembro {
     private String name;
     private int age;
     private String secretIdentity;
-    private String powers[];
+    private String[] powers;
 
     // Constructores
 
